@@ -28,7 +28,12 @@ function tripGenerator(destArray, restArray, transArray, entArray){
 let tripArray = tripGenerator(destinations, restaurants, transportation, entertainment);
 let choice = prompt(confirmationMessage);
 
-if(choice === "no" || choice === "No" || choice === "NO"){
+while(choice ==! "no" || "No" || "NO" || "yes" || "Yes" || "YES"){
+    alert("Invalid Selection");
+    choice = prompt(confirmationMessage);
+}
+
+while(choice === "no" || choice === "No" || choice === "NO"){
     let reroll = prompt(changeMessage);
     if(reroll == 1){
         tripArray[0] = randomPicker(destinations);
@@ -45,6 +50,7 @@ if(choice === "no" || choice === "No" || choice === "NO"){
     }else{
         alert("Invalid Selection");
     }
-}else if(choice === "yes" || choice === "Yes" || choice === "YES"){
-    alert()
+}
+if(choice === "yes" || choice === "Yes" || choice === "YES"){
+    alert(enjoyTripMessage);
 }
