@@ -29,10 +29,10 @@ let confirmationMessage = "You are going to " + tripArray[0] + ", where you will
 
 let choice = prompt(confirmationMessage);
 
-while(choice !== "no" || choice !== "No" || choice !== "NO"){  // loop won't recognize correct inputs
+/*while(choice === "test"){  // loop won't recognize correct inputs
     alert("Invalid Selection");
     choice = prompt(confirmationMessage);
-}
+}*/
 
 while(choice === "no" || choice === "No" || choice === "NO"){
     let reroll = prompt(changeMessage);
