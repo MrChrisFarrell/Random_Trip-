@@ -21,7 +21,7 @@ function tripGenerator(destArray, restArray, transArray, entArray){
     trip[3] = randomPicker(entArray);
     return trip;
 }
-
+// || choice !== "NO" || choice !== "yes" || choice !== "Yes" || choice !== "YES"
 // program starts here
 
 let tripArray = tripGenerator(destinations, restaurants, transportation, entertainment);
@@ -29,7 +29,7 @@ let confirmationMessage = "You are going to " + tripArray[0] + ", where you will
 
 let choice = prompt(confirmationMessage);
 
-while(choice ==! "no" || choice ==! "No" || choice ==! "NO" || choice ==! "yes" || choice ==! "Yes" || choice ==! "YES"){
+while(choice !== "no" || choice !== "No" || choice !== "NO"){  // loop won't recognize correct inputs
     alert("Invalid Selection");
     choice = prompt(confirmationMessage);
 }
