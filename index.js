@@ -4,5 +4,10 @@ let transportation = ["Car", "Moped", "Public", "Bike", "SUV", "Truck", "Taxi"];
 let entertainment = ["Concert", "Hike", "Casino", "Relaxing massage", "Run with the bulls"];
 
 function randomDest(places){
-    let destPick = destinations[Math.floor(Math.random() * 6) + 1];
+    let numberOfPlaces = places.length;
+    let random = Math.floor(Math.random() * numberOfPlaces);
+    let destPick = places[random];
+    return destPick;
 }
+let attempt = randomDest(destinations);
+console.log(attempt);
