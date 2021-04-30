@@ -3,3 +3,6 @@ let restaurants = ["Italian", "Seafood", "American", "Mexican", "Korean", "Japan
 let transportation = ["Car", "Moped", "Public", "Bike", "SUV", "Truck", "Taxi"];
 let entertainment = ["Concert", "Hike", "Casino", "Relaxing massage", "Run with the bulls"];
 
+function randomDest(places){
+    let destPick = destinations[Math.floor(Math.random() * 6) + 1];
+}
