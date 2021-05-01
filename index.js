@@ -25,38 +25,33 @@ function tripGenerator(destArray, restArray, transArray, entArray){
 // program starts here
 
 let tripArray = tripGenerator(destinations, restaurants, transportation, entertainment);
-let confirmationMessage = "You are going to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". You will be travelling by " + tripArray[2] + " to enjoy a " + tripArray[3] + "! Is this good? Type \"yes\" or \"no\".";
+let confirmationMessage = "You are going to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". You will be travelling by " + tripArray[2] + " to enjoy a " + tripArray[3] + "! Press OK to accept or Cancel to change.";
 
-let choice = prompt(confirmationMessage);
+let choice = confirm(confirmationMessage);
 
-/*while(choice === "test"){  // loop won't recognize correct inputs
-    alert("Invalid Selection");
-    choice = prompt(confirmationMessage);
-}*/
 
-while(choice === "no" || choice === "No" || choice === "NO"){
+
+while(choice === false){
     let reroll = prompt(changeMessage);
     if(reroll == "1"){
         tripArray[0] = randomPicker(destinations);
         confirmationMessage = "You are going to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". You will be travelling by " + tripArray[2] + " to enjoy a " + tripArray[3] + "! Is this good? Type \"yes\" or \"no\".";
-        choice = prompt(confirmationMessage);
+        choice = confirm(confirmationMessage);
     }else if(reroll == "2"){
         tripArray[1] = randomPicker(restaurants);
         confirmationMessage = "You are going to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". You will be travelling by " + tripArray[2] + " to enjoy a " + tripArray[3] + "! Is this good? Type \"yes\" or \"no\".";
-        choice = prompt(confirmationMessage);
+        choice = confirm(confirmationMessage);
     }else if(reroll == "3"){
         tripArray[2] = randomPicker(transportation);
         confirmationMessage = "You are going to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". You will be travelling by " + tripArray[2] + " to enjoy a " + tripArray[3] + "! Is this good? Type \"yes\" or \"no\".";
-        choice = prompt(confirmationMessage);
+        choice = confirm(confirmationMessage);
     }else if(reroll == "4"){
         tripArray[3] = randomPicker(entertainment);
         confirmationMessage = "You are going to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". You will be travelling by " + tripArray[2] + " to enjoy a " + tripArray[3] + "! Is this good? Type \"yes\" or \"no\".";
-        choice = prompt(confirmationMessage);
+        choice = confirm(confirmationMessage);
     }else{
         alert("Invalid Selection");
     }
 }
-if(choice === "yes" || choice === "Yes" || choice === "YES"){
-    let enjoyTripMessage = "Enjoy your trip to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". Be safe while travelling by " + tripArray[2] + ", and remember to enjoy the " + tripArray[3] + "!";
-    alert(enjoyTripMessage);
-}
+let enjoyTripMessage = "Enjoy your trip to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". Be safe while travelling by " + tripArray[2] + ", and remember to enjoy the " + tripArray[3] + "!";
+alert(enjoyTripMessage);
