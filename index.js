@@ -1,9 +1,9 @@
 let destinations = ["Tokyo", "Denver", "San Diego", "Paris", "Miami", "Italy"];
 let restaurants = ["Italian", "Seafood", "American", "Mexican", "Korean", "Japanese"];
-let transportation = ["Car", "Moped", "Public", "Bike", "SUV", "Truck", "Taxi"];
+let transportation = ["Car", "Moped", "Bus", "Bike", "SUV", "Truck", "Taxi"];
 let entertainment = ["Concert", "Hike", "Casino", "Relaxing massage", "Run with the bulls"];
 
-let changeMessage = "What would you like to change? \[Enter \"1\" to change Destination\] \[Enter \"2\" to change Restaurant\] \[Enter \"3\" to change Transportation\] \[Enter \"4\" to change Entertainment\]";
+
 
 
 function randomPicker(array){
@@ -29,7 +29,7 @@ let confirmationMessage = "You are going to " + tripArray[0] + ", where you will
 
 let choice = confirm(confirmationMessage);
 
-
+let changeMessage = "What would you like to change? \[Enter \"1\" to change " + tripArray[0] + "\] \[Enter \"2\" to change " + tripArray[1] + "\] \[Enter \"3\" to change " + tripArray[2] + "\] \[Enter \"4\" to change " + tripArray[0] + "\]";
 
 while(choice === false){
     let reroll = prompt(changeMessage);
