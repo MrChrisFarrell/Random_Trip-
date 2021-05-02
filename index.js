@@ -55,3 +55,4 @@ while(choice === false){
 }
 let enjoyTripMessage = "Enjoy your trip to " + tripArray[0] + ", where you will eat " + tripArray[1] + ". Be safe while travelling by " + tripArray[2] + ", and remember to enjoy the " + tripArray[3] + "!";
 alert(enjoyTripMessage);
+console.log(enjoyTripMessage);
